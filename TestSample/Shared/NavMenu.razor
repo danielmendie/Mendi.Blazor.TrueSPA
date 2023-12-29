@@ -1,0 +1,61 @@
+﻿
+@using TestSample.Pages.Ecommerce
+@using TestSample.Pages.Intro
+@using TestSample.Pages.StudentMgt
+
+<MudPaper Elevation="0" Height="0%">
+    <MudToolBar Style="height: 0px !important;">
+        <MudMenu Dense=true LockScroll=true>
+            <ActivatorContent>
+                <MudChip Icon="@Icons.Material.Outlined.Business" Color="Color.Success" Size="Size.Medium">
+                    <span>@(Route?.AppName ?? "No Apps Found")</span>
+                </MudChip>
+            </ActivatorContent>
+            <ChildContent>
+                @if (Route?.AppId == 2)
+                {
+                        <MudMenuItem Icon="@Icons.Material.Outlined.Verified"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(BookStore))"
+                                 OnClick="() => OnMenuItemClicked(nameof(BookStore))">Catalog</MudMenuItem>
+
+                        @* <MudMenuItem Icon="@Icons.Material.Outlined.WorkspacePremium"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceSubscription))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceSubscription))">Subscriptions</MudMenuItem>
+                    
+                        <MudMenuItem Icon="@Icons.Material.Outlined.AddModerator"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceGrant))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceGrant))">Access Codes</MudMenuItem>
+                    
+                        <MudMenuItem Icon="@Icons.Material.Outlined.Roofing"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceCatalog))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceCatalog))">Catalog</MudMenuItem>
+                    
+                        <MudMenuItem Icon="@Icons.Material.Outlined.PersonPin"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceCustomers))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceCustomers))">Customers</MudMenuItem>
+                    
+                        <MudMenuItem Icon="@Icons.Material.Outlined.People"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceUser))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceUser))">Staffs</MudMenuItem>
+                    
+                        <MudMenuItem Icon="@Icons.Material.Outlined.AccountBalanceWallet"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpaceWallet))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpaceWallet))">Revenue</MudMenuItem>
+                   
+                        <MudMenuItem Icon="@Icons.Material.Outlined.Payments"
+                                     ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(SpacePayout))"
+                                     OnClick="() => OnMenuItemClicked(nameof(SpacePayout))">Payouts</MudMenuItem> *@
+                }
+                else if (Route?.AppId == 1)
+                {
+                            <MudMenuItem Icon="@Icons.Material.Outlined.ManageAccounts"
+                                         ontouchstart="event.preventDefault();" OnTouch="() => OnMenuItemClicked(nameof(CalculatorEmulator))"
+                                 OnClick="() => OnMenuItemClicked(nameof(CalculatorEmulator))">View All Records</MudMenuItem>
+                            <MudMenuItem Icon="@Icons.Material.Outlined.Bolt">Payouts</MudMenuItem>
+                            <MudMenuItem Icon="@Icons.Material.Outlined.LockReset">Access Codes</MudMenuItem>
+                }
+
+            </ChildContent>
+        </MudMenu>
+    </MudToolBar>
+</MudPaper>

@@ -1,0 +1,24 @@
+﻿@page "/"
+
+
+
+<nav class="logo-container p-0 navbar navbar-dark">
+    <NavQuickAction OnNavMenuClicked="e=> OnMapNavMenuClicked(e)" />
+    <div class="demo-btn-container d-flex">
+        <NavMenu OnNavMenuClicked="e=> OnMapNavMenuClicked(e)" />
+    </div>
+</nav>
+<div class="demo-content">
+    <div class="main">
+        <div class="content px-4">
+            @if (PageRouteContainer.CurrentPageRoute != null)
+            {
+                <DynamicComponent Type="@PageRouteContainer.CurrentPageRoute" Parameters="@PageRouteRegistry.ApplicationRoutes[PageRouteContainer.CurrentPageRoute.Name]?.ComponentParameters" />
+            }
+            else
+            {
+                <h5 style="color:lightslategray;">No matching routable component found</h5>
+            }
+        </div>
+    </div>
+</div>

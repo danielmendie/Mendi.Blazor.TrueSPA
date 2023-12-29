@@ -1,0 +1,50 @@
+﻿[
+  {
+    "bookName": "The Guardians of bore",
+    "editorName": "Daniel Errico",
+    "bestSellingBookTitle": "I think",
+    "ageRange": "Age 8-10",
+    "numberOfPages": 129,
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/261e70a6-ad8d-48bd-8e3f-148ce60e257e/GuardianCoverFull.jpg"
+  },
+  {
+    "bookName": "When Do Hippos Play",
+    "editorName": "Daniel Errico",
+    "bestSellingBookTitle": "Should be",
+    "ageRange": "Age 5-7",
+    "numberOfPages": 31,
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5493706de4b0ecaa4047b871/1d6ebd3f-333f-4a58-830f-9d834d6d3956/When+Do+Hippos+Play+Cover+Small+Thumbnail.jpeg"
+  },
+  {
+    "bookName": "Up in the Air",
+    "editorName": "I didn't see any name😁",
+    "bestSellingBookTitle": "Hmm, I dont know",
+    "ageRange": "Age 5-7",
+    "numberOfPages": 20,
+    "imageUrl": "https://www.splashlearn.com/blog/wp-content/uploads/2022/01/up-in-the-air.png"
+  },
+  {
+    "bookName": "The Braviest Fish",
+    "editorName": "Matt Buckingham",
+    "bestSellingBookTitle": "Yes",
+    "ageRange": "Age 5-7",
+    "numberOfPages": 41,
+    "imageUrl": "https://i.ytimg.com/vi/x9qCa0wntIY/hqdefault.jpg"
+  },
+  {
+    "bookName": "The Gruffalo",
+    "editorName": "Julia Donaldson",
+    "bestSellingBookTitle": "Yes",
+    "ageRange": "Age 9-13",
+    "numberOfPages": 44,
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2022/11/IM/IV/VW/32970822/story-book-500x500.jpg"
+  },
+  {
+    "bookName": "Charlotte's Web",
+    "editorName": "E.B. White",
+    "bestSellingBookTitle": "Yes",
+    "ageRange": "Age 9-13",
+    "numberOfPages": 137,
+    "imageUrl": "https://www.mkewithkids.com/wp-content/uploads/2022/03/Charlottes-Web.png"
+  }
+]

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>annotations</Nullable>
+		<PackAsTool>True</PackAsTool>
+		<ToolCommandName>truespa-engine</ToolCommandName>
+		<NuspecFile>Mendi.Blazor.TrueSPA.CLI.nuspec</NuspecFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommandLineParser" Version="2.9.1" />
+		<!--<PackageReference Include="Mendi.Blazor.TrueSPA.Common" Version="0.0.1" />-->
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Mendi.Blazor.TrueSPA.Common\Mendi.Blazor.TrueSPA.Common.csproj" />
+	</ItemGroup>
+
+</Project>

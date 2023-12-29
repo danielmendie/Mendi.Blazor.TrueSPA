@@ -1,0 +1,5 @@
+
+
+--- Calling pages dynamically----
+ <DynamicComponent Type="@RouteContainer.CurrentPageRoute" Parameters="@RouteRegistry.PageParameters[RouteContainer?.CurrentPageRoute?.Name]?.Parameters" />
+

@@ -1,0 +1,37 @@
+﻿<PageTitle>BookStore Ecommerce</PageTitle>
+
+<div class="col-md-10 col-sm-12 ml-auto mr-auto mt-auto mb-auto">
+    @if (Books == null)
+    {
+        <div class="text-center">
+            <p><em>Loading...</em></p>
+        </div>
+    }
+    else
+    {
+        @foreach (var book in Books)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                <MudCard Elevation="3">
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.body2" Color="Color.Dark">
+                                <h5>@book.AgeRange</h5>
+                            </MudText>
+                            <MudText Typo="Typo.body1" Color="Color.Success">
+                                <a @onclick:preventDefault @onclick="()=> OnBookClicked(book)" style="cursor:pointer" class="text-success">
+                                    <h3><strong>@(book.BookName.Length > 30 ? $"{book.BookName.Substring(0, 30)}..." : book.BookName) </strong></h3>
+                                </a>
+                            </MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardMedia Image="@book.ImageUrl" Height="250" @onclick="()=> OnBookClicked(book)" />
+                    <MudCardActions>
+                        <MudChip Icon="@Icons.TwoTone.Payments" Label="true" Color="Color.Success">@book.NumberOfPages</MudChip>
+                            <MudChip Icon="@Icons.TwoTone.Discount" Label="true" Color="Color.Dark">@(book.EditorName.Length > 15 ? $"{book.EditorName.Substring(0, 15)}..." : book.EditorName)</MudChip>
+                    </MudCardActions>
+                </MudCard>
+            </div>
+        }
+    }
+</div>

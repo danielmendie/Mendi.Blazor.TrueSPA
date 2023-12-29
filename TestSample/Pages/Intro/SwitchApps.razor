@@ -1,0 +1,40 @@
+﻿<PageTitle>Switch Apps</PageTitle>
+
+<div class="col-md-8 col-sm-12 ml-auto mr-auto mt-5">
+    <div class="content-wrapper mb-3 mt-3" style="padding-top:0px">
+        <div class="account-orders">
+            <div class="flex-table" style="height: 100vh;overflow: scroll;">
+                <div class="row">
+                    @{
+                        var groupByApps = Apps.GroupBy(b => b.Value.AppId);
+                        foreach (var app in groupByApps)
+                        {
+                            var defaultApp = app.First();
+                            <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+                                <MudCard Elevation="3">
+                                    <a @onclick:preventDefault @onclick="() => OnAppClicked(app.Key)" style="cursor:pointer">
+                                        <MudCardHeader>
+                                            <CardHeaderAvatar>
+                                                <MudAvatar Variant="Variant.Outlined" Color="Color.Warning" Elevation="3" Square="true">
+                                                    @defaultApp.Value.AppName.ToUpper().First()
+                                                </MudAvatar>
+                                            </CardHeaderAvatar>
+                                            <CardHeaderContent>
+                                                <h3 class="text-success" style="margin-bottom:0 !important">
+                                                    <strong>
+                                                        @(defaultApp.Value.AppName.Length > 15 ? $"{defaultApp.Value.AppName.Substring(0, 15)}..." : defaultApp.Value.AppName)
+                                                    </strong>
+                                                </h3>
+                                            </CardHeaderContent>
+                                        </MudCardHeader>
+                                    </a>
+                                </MudCard>
+                            </div>
+
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
